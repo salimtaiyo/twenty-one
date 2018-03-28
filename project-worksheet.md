@@ -85,7 +85,7 @@ function playerChange(){
 }
 
 function check(){
-    checks if the win condition. 
+    checks  the win condition. 
 }
 
 <!-- 
