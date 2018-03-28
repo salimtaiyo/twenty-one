@@ -27,7 +27,13 @@ Include images of your wireframes.
 
 ## Priority Matrix
 
-Include a full list of features that have been prioritized based on the `Time and Importance` Matix.  
+Include a full list of features that have been prioritized based on the `Time and Importance` Matix.  | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
+
+| landing page | high | 2hours | :---: | :---: |
+| game | V.High |  24hours | :---: | :---: |
+
+
+
 
 ## Game Components
 
@@ -65,16 +71,29 @@ Include the full list of features that you are considering for POST MVP
 Based on the initial logic defined in the previous game phases section try and breakdown the logic further into functional components, and by that we mean functions.  Does your logic indicate that code could be encapsulated for the purpose of reusablility.  Once a function has been defined it can then be incorporated into a class as a method. 
 
 Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. 
+
+function generateNumber(){
+    generates a random number;
+}
+
+function holdPoints(){
+    holds the point of the current player
+}
+
+function playerChange(){
+    changes the player
+}
+
+function check(){
+    checks if the win condition. 
+}
+
 <!-- 
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | Component 1 | H | 10hrs| 12hrs | 12hrs |
 | Total |  | 10hrs| 12hrs | 12hrs | -->
 
-| Component | Priority | Estimated Time | Time Invetsted | Actual Time |
-
-| landing page | high | 2hours | :---: | :---: |
-| game | V.High |  24hours | :---: | :---: |
 
 
 
