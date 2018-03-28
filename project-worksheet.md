@@ -25,6 +25,8 @@ It is a two player game where players roll a dice and try to reach 21 points. Th
 
 Include images of your wireframes. 
 
+![wireframe](/img/wireframe.JPG)
+
 ## Priority Matrix
 
 Include a full list of features that have been prioritized based on the `Time and Importance` Matix.  | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
