@@ -1,0 +1,6 @@
+.background{
+    height: 100vh;
+    position: relative;
+    background: rgb(211, 35, 35);
+    @include back-clip;
+}

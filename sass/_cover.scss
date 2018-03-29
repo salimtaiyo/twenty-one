@@ -3,12 +3,12 @@
     width: 40vw;
     height: 80vh;
     background: rgb(189, 170, 170);
-    position: relative;
+    position: absolute;
     left: 50%;
-    top: 50%;
+    top: 2%;
     color: #eee;
     transform: translate(-1%, 12%);
-    perspective: 300rem;
+    perspective: 250vw;
     text-align: center;
     
     @include box-shadow;
@@ -24,7 +24,7 @@
         transform: rotateY(-30deg);
         transform-style: preserve-3d;
         transform-origin: left;
-        transition: all 1s ease-in-out;
+        transition: all 2s ease-in-out;
         @include box-shadow;
 
         //front and back cover attributes
@@ -39,7 +39,7 @@
             //front cover with the dice image
             &--front{
                 background: url('../img/front.jpg') center no-repeat;
-                background-size: 100vw;
+                background-size: cover;
             }
             //back cover with the instructions    
             &--back{
