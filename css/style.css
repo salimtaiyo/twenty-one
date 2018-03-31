@@ -11,11 +11,10 @@ html {
 .container {
   width: 40vw;
   height: 80vh;
-  background: #bdaaaa;
+  background: #e2dfdf;
   position: absolute;
   left: 50%;
   top: 2%;
-  color: #eee;
   transform: translate(-1%, 12%);
   perspective: 250vw;
   text-align: center;
@@ -30,22 +29,23 @@ html {
     transform: rotateY(-30deg);
     transform-style: preserve-3d;
     transform-origin: left;
-    transition: all 2s ease-in-out;
-    -webkit-box-shadow: -12px 10px 30px -6px rgba(0, 0, 0, 0.82);
-    -moz-box-shadow: -12px 10px 30px -6px rgba(0, 0, 0, 0.82);
-    box-shadow: -12px 10px 30px -6px rgba(0, 0, 0, 0.82); }
+    transition: all 10s ease-in-out;
+    -webkit-box-shadow: 2px 26px 27px -10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 26px 27px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 26px 27px -10px rgba(0, 0, 0, 0.75); }
     .container__main .flip {
       margin: 0;
       position: absolute;
       display: block;
       width: 100%;
       height: 100%;
-      backface-visibility: hidden; }
+      backface-visibility: hidden;
+      color: rgba(0, 0, 0, 0.466); }
     .container__main--front {
-      background: url("../img/front.jpg") center no-repeat;
-      background-size: cover; }
+      background: url("../img/cover.jpg") center no-repeat;
+      background-size: 100% 100%; }
     .container__main--back {
-      background: #3f49d8;
+      background: #e2dfdf;
       transform: rotateY(180deg);
       z-index: 2;
       left: 0; }
@@ -61,10 +61,11 @@ html {
   font-size: 2vw;
   grid-gap: 1%;
   grid-row-gap: 1vw;
-  overflow: hidden; }
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0.5); }
 
 .player--0 {
-  grid-row: 1/ span 2;
+  grid-row: 1/ span 1;
   grid-column: 1/ span 2; }
 
 .player--1 {
@@ -88,13 +89,13 @@ html {
 .player--0--score {
   grid-row: 4 /span 1;
   grid-column: 1 /span 2;
-  background-color: #bb3434;
+  background: #83BCFF;
   padding: 10%; }
 
 .player--1--score {
   grid-row: 4 /span 1;
   grid-column: 3 /span 2;
-  background-color: #bb3434;
+  background: #83BCFF;
   padding: 10%; }
 
 .player--0--roll {
@@ -115,9 +116,12 @@ html {
   display: none;
   object-fit: contain; }
 
+.highlight {
+  background-color: #c91e1e; }
+
 .background {
   height: 100vh;
   position: relative;
-  background: #d32323;
+  background: #83BCFF;
   -webkit-clip-path: polygon(81% 0, 100% 0, 100% 70%, 25% 100%, 0 100%, 0% 30%);
   clip-path: polygon(81% 0, 100% 0, 100% 70%, 25% 100%, 0 100%, 0% 30%); }

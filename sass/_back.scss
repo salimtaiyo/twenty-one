@@ -1,6 +1,8 @@
 .background{
     height: 100vh;
     position: relative;
-    background: rgb(211, 35, 35);
+    // background: rgb(211, 35, 35);
+    background: #83BCFF;
     @include back-clip;
+    // z-index: 100;
 }

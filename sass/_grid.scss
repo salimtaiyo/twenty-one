@@ -9,10 +9,11 @@
     grid-gap: 1%;
     grid-row-gap: 1vw;
     overflow: hidden;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .player--0{
-    grid-row: 1/ span 2;
+    grid-row: 1/ span 1;
     grid-column: 1/ span 2;
 }
 
@@ -28,39 +29,34 @@
     &:hover {
         cursor:pointer;
     }
-
 }
 
 .hold{
     grid-row: 5 /span 1;
     grid-column: 4 /span 1;
-
 }
 
 .new{
     grid-row: 5 /span 1;
     grid-column: 1 /span 1;
-
 }
 
 .player--0--score{
     grid-row: 4 /span 1;
     grid-column: 1 /span 2;
-    background-color: rgb(187, 52, 52);
+    background:#83BCFF;
     padding: 10%;
-
 }
 
 .player--1--score{
     grid-row: 4 /span 1;
     grid-column: 3 /span 2;
-    background-color: rgb(187, 52, 52);
+    background:#83BCFF;
     padding: 10%;
 }
 .player--0--roll{
     grid-row: 3 /span 1;
     grid-column: 1 /span 2;
-
 }
 
 .player--1--roll{
@@ -77,4 +73,9 @@
     height: 100%;
     display: none;
     object-fit: contain;
+}
+
+//highlight active player 
+.highlight{
+    background-color: rgb(201, 30, 30);
 }

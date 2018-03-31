@@ -1,10 +1,22 @@
+// box shadow used for the cover and the main container
 @mixin box-shadow{
     -webkit-box-shadow: -12px 10px 30px -6px rgba(0,0,0,0.82);
     -moz-box-shadow: -12px 10px 30px -6px rgba(0,0,0,0.82);
     box-shadow: -12px 10px 30px -6px rgba(0,0,0,0.82);
-
 }
 
+// box shadow used for the cover on hover
+// @mixin box-shadow2{
+//     -webkit-box-shadow: -10px 10px 37px 0px rgba(0,0,0,0.75);
+//     -moz-box-shadow: -10px 10px 37px 0px rgba(0,0,0,0.75);
+//     box-shadow: -10px 10px 37px 0px rgba(0,0,0,0.75);
+// }
+
+@mixin box-shadow2{
+    -webkit-box-shadow: 2px 26px 27px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 26px 27px -10px rgba(0,0,0,0.75);
+    box-shadow: 2px 26px 27px -10px rgba(0,0,0,0.75);
+}
 @mixin back-clip{
     -webkit-clip-path: polygon(81% 0, 100% 0, 100% 70%, 25% 100%, 0 100%, 0% 30%);
 clip-path: polygon(81% 0, 100% 0, 100% 70%, 25% 100%, 0 100%, 0% 30%);

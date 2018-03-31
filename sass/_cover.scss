@@ -2,15 +2,13 @@
 .container{
     width: 40vw;
     height: 80vh;
-    background: rgb(189, 170, 170);
+    background:  rgb(226, 223, 223);
     position: absolute;
     left: 50%;
     top: 2%;
-    color: #eee;
     transform: translate(-1%, 12%);
     perspective: 250vw;
     text-align: center;
-    
     @include box-shadow;
     
     //cover
@@ -18,14 +16,13 @@
         // display: none;
         width: 100%;
         height: 100%;
-        // background: rgb(0, 0, 0);
         position: absolute;
         top:0;
         transform: rotateY(-30deg);
         transform-style: preserve-3d;
         transform-origin: left;
-        transition: all 2s ease-in-out;
-        @include box-shadow;
+        transition: all 10s ease-in-out;
+        @include box-shadow2;
 
         //front and back cover attributes
         .flip{
@@ -35,25 +32,24 @@
             width: 100%;
             height: 100%;
             backface-visibility: hidden;
+            color: rgba(0, 0, 0, 0.466)
         }
             //front cover with the dice image
             &--front{
-                background: url('../img/front.jpg') center no-repeat;
-                background-size: cover;
+                background: url('../img/cover.jpg') center no-repeat;
+                background-size: 100% 100%;
             }
             //back cover with the instructions    
             &--back{
-                background: rgb(63, 73, 216);
+                background: rgb(226, 223, 223);
                 transform: rotateY(180deg);
                 z-index: 2;
                 left: 0;
             }
-
-    }
+        }
     //turn on hover effect
     &:hover &__main{
         transform: rotateY(-180deg);
+        
     }
-   
-   
 }
