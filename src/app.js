@@ -29,6 +29,9 @@ $(() => {
 
   // roll button
   $roll.on('click', () => {
+    if (active === 0) {
+      $playerOne.addClass('highlight');
+    }
     // random number generator
     const random = Math.floor(Math.random() * 3) + 1;
     $dice.attr('src', `./img/dice-${random}.png`);
