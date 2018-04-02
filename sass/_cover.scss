@@ -23,7 +23,7 @@
         transform-origin: left;
         transition: all 1s ease-in-out;
         @include box-shadow2;
-        transform: rotateY(-180deg);
+        // transform: rotateY(-180deg);
 
         //front and back cover attributes
         .flip{
@@ -50,7 +50,7 @@
         }
     //turn on hover effect
     &:hover &__main{
-        // transform: rotateY(-180deg);
+        transform: rotateY(-180deg);
         
     }
 }

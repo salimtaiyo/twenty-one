@@ -10,6 +10,8 @@
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <title>One Piece</title>
+    <!-- icon -->
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
@@ -28,7 +30,7 @@
         
         <div class="container__grid">
             <div class="new">
-                <p>NEW</p>
+                <p class="ion-ios-ionic-outline">NEW</p>
             </div>
             <div class="dice--roll">
                 <!-- <img src="" alt="dice" class="dice"> -->
@@ -55,10 +57,10 @@
                     <p class="1--points">0</p>
             </div>
             <div class="roll">
-                    <p>ROLL</p>
+                    <p class="ion-ios-reload">ROLL</p>
             </div>
             <div class="hold">
-                    <p>HOLD</p>
+                    <p class="ion-plus-circled">HOLD</p>
             </div>
         </div>
 
@@ -69,18 +71,16 @@
                 
             </div>
             <div class="container__main--back flip">
-                <h2 class="change"> Instructions</h2>
-                <ul class="ul">
-                    <li>Roll the dice</li>
-                    <li>The goal is to reach 21 first</li>
-                    <li>Player 1 gets to roll the dice first</li>
-                    <li>lorem </li>
-                    <li>lorem</li>
-                </ul>
-                <div class="input__name">
-                    <input class="input__name--1" type="text" placeholder="Player One">
-                    <input class="input__name--2" type="text" placeholder="Player Two">
-                    <input class="input__name--btn" type="submit" placeholder="Confirm">
+                <div class="back__box">
+                    <h2 class="instruct"> Instructions</h2>
+                    <ul class="ul">
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolorum sunt quas </li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolorum sunt quas</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolorum sunt quas</li>
+                        <li>lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolorum sunt quas </li>
+                        <li>lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolorum sunt quas</li>
+                    </ul>
+                    <div class="h3 change"> Click here to Change Player Name</div>
                 </div>
             </div> 
 
@@ -89,6 +89,20 @@
 
         </div>
     </div>
+    <!-- input modal -->
+    <div class="input__name">
+        <p> <label> Player One</label> 
+            <input class="input__name--1" type="text" placeholder="Name">
+        </p>
+        <p> <label>Player Two</label>
+            <input class="input__name--2" type="text" placeholder="Name">
+        </p>
+        
+        <input class="input__name--btn" type="submit" placeholder="Confirm">
+    </div>
+
+    <!-- winner display modal -->
+
 
     <script src="./src/app.js"></script>
     

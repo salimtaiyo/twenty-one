@@ -34,11 +34,19 @@
 .hold{
     grid-row: 5 /span 1;
     grid-column: 4 /span 1;
+
+    &:hover {
+        cursor:pointer;
+    }
 }
 
 .new{
     grid-row: 5 /span 1;
     grid-column: 1 /span 1;
+
+    &:hover {
+        cursor:pointer;
+    }
 }
 
 .player--0--score{
@@ -76,6 +84,7 @@
 }
 
 //highlight active player 
+
 .highlight{
-    background-color: rgb(201, 30, 30);
+    border-bottom: 2px solid rgb(0, 117, 252);
 }

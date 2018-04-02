@@ -3,7 +3,7 @@ $(() => {
   const $roll = $('.roll'); // selects the roll button
   const $hold = $('.hold'); // selects the hold button
 
-  const $playerScoreOne = $('.player--0--roll'); 
+  const $playerScoreOne = $('.player--0--roll');
   const $playerScoreTwo = $('.player--1--roll');
 
   const $playerOne = $('.player--0');
@@ -13,9 +13,9 @@ $(() => {
   let roundScore = 0; // setting the roundscore to 0
   let points = [0, 0];
 
-  const $new = $('.new');
-  const $nameOne = $('.name--1');
-  const $nameTwo = $('.name--2');
+  const $new = $('.new'); // reset button
+  const $nameOne = $('.name--1'); // player -1 name
+  const $nameTwo = $('.name--2'); // player -2 name
   const $showInput = $('.change'); // player name input buton
 
   const sound = new Audio(); // audio sfx on roll
@@ -25,12 +25,16 @@ $(() => {
   function playerChange() {
     if (active === 0) {
       active = 1;
-      $playerTwo.addClass('highlight');
-      $playerOne.removeClass('highlight');
+      // $playerTwo.addClass('highlight');
+      // $playerOne.removeClass('highlight');
+      $nameTwo.addClass('highlight');
+      $nameOne.removeClass('highlight');
     } else {
       active = 0;
-      $playerOne.addClass('highlight');
-      $playerTwo.removeClass('highlight');
+      // $playerOne.addClass('highlight');
+      // $playerTwo.removeClass('highlight');
+      $nameOne.addClass('highlight');
+      $nameTwo.removeClass('highlight');
     }
     roundScore = 0;
     $playerScoreOne.text('0');
@@ -41,7 +45,8 @@ $(() => {
   $roll.on('click', () => {
     sound.play();
     if (active === 0) {
-      $playerOne.addClass('highlight');
+      // $playerOne.addClass('highlight');
+      $nameOne.addClass('highlight');
     }
     // random number generator
     const random = Math.floor(Math.random() * 3) + 1;
@@ -78,14 +83,17 @@ $(() => {
     $playerScoreTwo.text('0');
     $('.0--points').text('0');
     $('.1--points').text('0');
-    $playerOne.removeClass('highlight');
-    $playerTwo.removeClass('highlight');
+    // $playerOne.removeClass('highlight');
+    // $playerTwo.removeClass('highlight');
     $dice.hide();
+    $nameOne.removeClass('highlight');
+    $nameTwo.removeClass('highlight');
   });
 
   // player name
   $showInput.on('click', () => {
     $('.input__name').show();
+    // alert('pressed');
   });
 
   // setting and hidding the input modal

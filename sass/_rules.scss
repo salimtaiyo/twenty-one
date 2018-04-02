@@ -1,19 +1,84 @@
+// instruction page
 .container__main--back{
     position: relative;
     overflow: hidden;
     margin: 2vw;
 }
+//container for the instruction
+.back__box{
+    position: relative;
+    padding: 3vw;
+    font-size: 1.2vw;
+}
+
+// header
+.instruct{
+    border-bottom: 1px solid red;
+   
+}
+// resetting the value of ul
 ul{
     list-style-type: none;
 }
 
+.h3{
+    padding: 1vw;
+    color: red;
+
+    &:hover{
+        cursor: pointer;
+    }
+
+}
+// input name box
 .input__name{
-    display: none;
-    transform: translate(-1%,335%);
+  position: absolute;
+  padding: 3vw;
+  top: 20%;
+  left: 25%;
+  display: none;
+  height: 30vw;
+  width: 40vw;
+  z-index: 100;
+//   background: rgba(170, 255, 230, 0.767);
+background: rgba(255, 255, 255, 0.808);
+
+  & p input{
+      width: 99%;
+      margin: 0 auto;
+      margin-bottom: 1vw;
+      background: transparent;
+      border: none;
+      border-bottom: .2rem solid black;
+      outline: none;
+      color: rgb(41, 39, 39);
+      height: 4vw;
+      font-size: 150%;
+  }
+  &--btn{
+      border: .2vw solid black;
+      display: inline-block;
+      position: absolute;
+      left: 20%;
+      width: 60%;
+      background-color: rgba(27, 25, 25, 0.829);
+      color: #fff;
+      font-size: 1vw;
+      height: 3vw;
+
+      &:hover{
+          cursor: pointer;
+      }
+  }
+  & p{
+      text-align: center;
+      font-size: 1vw;
+  }
 }
 
-input{
-    outline: none;
-    padding: 1vw;
-    width: 100%;
-}
+// input{
+//     display: inline-block;
+//     outline: none;
+//     padding: 1vw;
+//     width: 100%;
+// }
