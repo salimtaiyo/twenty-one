@@ -1,3 +1,19 @@
+.container__main--back{
+    position: relative;
+    overflow: hidden;
+    margin: 2vw;
+}
 ul{
     list-style-type: none;
+}
+
+.input__name{
+    display: none;
+    transform: translate(-1%,335%);
+}
+
+input{
+    outline: none;
+    padding: 1vw;
+    width: 100%;
 }

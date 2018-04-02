@@ -32,7 +32,8 @@ html {
     transition: all 1s ease-in-out;
     -webkit-box-shadow: 2px 26px 27px -10px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 2px 26px 27px -10px rgba(0, 0, 0, 0.75);
-    box-shadow: 2px 26px 27px -10px rgba(0, 0, 0, 0.75); }
+    box-shadow: 2px 26px 27px -10px rgba(0, 0, 0, 0.75);
+    transform: rotateY(-180deg); }
     .container__main .flip {
       margin: 0;
       position: absolute;
@@ -49,8 +50,6 @@ html {
       transform: rotateY(180deg);
       z-index: 2;
       left: 0; }
-  .container:hover .container__main {
-    transform: rotateY(-180deg); }
 
 .container__grid {
   position: relative;
@@ -126,5 +125,19 @@ html {
   -webkit-clip-path: polygon(81% 0, 100% 0, 100% 70%, 25% 100%, 0 100%, 0% 30%);
   clip-path: polygon(81% 0, 100% 0, 100% 70%, 25% 100%, 0 100%, 0% 30%); }
 
+.container__main--back {
+  position: relative;
+  overflow: hidden;
+  margin: 2vw; }
+
 ul {
   list-style-type: none; }
+
+.input__name {
+  display: none;
+  transform: translate(-1%, 335%); }
+
+input {
+  outline: none;
+  padding: 1vw;
+  width: 100%; }

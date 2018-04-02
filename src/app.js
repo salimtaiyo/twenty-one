@@ -1,15 +1,25 @@
 $(() => {
-  const $dice = $('.dice');
-  const $roll = $('.roll');
-  const $hold = $('.hold');
-  const $playerScoreOne = $('.player--0--roll');
+  const $dice = $('.dice'); // selects the dice
+  const $roll = $('.roll'); // selects the roll button
+  const $hold = $('.hold'); // selects the hold button
+
+  const $playerScoreOne = $('.player--0--roll'); 
   const $playerScoreTwo = $('.player--1--roll');
+
   const $playerOne = $('.player--0');
   const $playerTwo = $('.player--1');
-  let active = 0;
-  let roundScore = 0;
+
+  let active = 0; // setting the active player to 0
+  let roundScore = 0; // setting the roundscore to 0
   let points = [0, 0];
+
   const $new = $('.new');
+  const $nameOne = $('.name--1');
+  const $nameTwo = $('.name--2');
+  const $showInput = $('.change'); // player name input buton
+
+  const sound = new Audio(); // audio sfx on roll
+  sound.src = '../img/dicesfx.mp3';
 
   // change player and adding/removing the highlight class
   function playerChange() {
@@ -29,6 +39,7 @@ $(() => {
 
   // roll button
   $roll.on('click', () => {
+    sound.play();
     if (active === 0) {
       $playerOne.addClass('highlight');
     }
@@ -70,5 +81,19 @@ $(() => {
     $playerOne.removeClass('highlight');
     $playerTwo.removeClass('highlight');
     $dice.hide();
+  });
+
+  // player name
+  $showInput.on('click', () => {
+    $('.input__name').show();
+  });
+
+  // setting and hidding the input modal
+  $('.input__name--btn').on('click', () => {
+    const x = $('.input__name--1').val();
+    const y = $('.input__name--2').val();
+    $nameOne.text(x);
+    $nameTwo.text(y);
+    $('.input__name').hide();
   });
 });
