@@ -7,3 +7,6 @@
 <li>If they roll 1, they lose all their round score and the other player gets their turn</li>
 <li>Players have an option to hold their score in the Global score and the other player gets their turn</li>
 <li>The player who reaches 21 points first in the Global score wins</li>
+
+<h4> Technologies used: <h4>
+<p> HTML, CSS, SCSS, jQuery, JS </p>
