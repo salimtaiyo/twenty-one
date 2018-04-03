@@ -9,7 +9,7 @@
         src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-    <title>One Piece</title>
+    <title>TwentyOne</title>
     <!-- icon -->
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- favicon -->
@@ -22,12 +22,13 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-    <div class="background">
+    <!-- background-clip -->
+    <div class="background" id="particles-js">
         
     </div>
+
     <div class="container">
         <!-- the game grid -->
-        
         <div class="container__grid">
             <div class="new">
                 <p class="ion-ios-ionic-outline">NEW</p>
@@ -49,11 +50,11 @@
                     <p>0</p>
             </div>
             <div class="player--0--score">
-                    <p>TOTAL</p>
+                    <p>Global score</p>
                     <p class="0--points">0</p>
             </div>
             <div class="player--1--score">
-                    <p>TOTAL</p>
+                    <p>Global score</p>
                     <p class="1--points">0</p>
             </div>
             <div class="roll">
@@ -74,13 +75,15 @@
                 <div class="back__box">
                     <h2 class="instruct"> Instructions</h2>
                     <ul class="ul">
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolorum sunt quas </li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolorum sunt quas</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolorum sunt quas</li>
-                        <li>lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolorum sunt quas </li>
-                        <li>lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolorum sunt quas</li>
+                        <li>This game is a multiplayer dice game, played in rounds</li>
+                        <li> A random number from 1 to 3 is generated when rolled </li>
+                        <li>Each player gets to roll as many times as they want </li>
+                        <li>Each rolls point gets added to the round score</li>
+                        <li>If they roll 1, they lose all their round score and the other player gets their turn</li>
+                        <li>Players have an option to hold their score in the Global score and the other player gets their turn</li>
+                        <li>The player who reaches 21 points first in the Global score wins</li>
                     </ul>
-                    <div class="h3 change"> Click here to Change Player Name</div>
+                    <div class="h3 change"> Change Player Name</div>
                 </div>
             </div> 
 
@@ -102,9 +105,25 @@
     </div>
 
     <!-- winner display modal -->
+    <div class="winner">
+        <span class="winner__close ion-android-cancel"> </span>
+        <h1 class="winner__header">
+            <span class="winner__header--extra">Congratulation!</span> <span class="winner__header--name">You</span> just won.
+        </h1>
+    </div>
 
 
     <script src="./src/app.js"></script>
+    <!-- particle js  -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"> 
+    </script>
+    <script>
+            particlesJS.load('particles-js',
+            'particles.json',function(){
+            }
+            );
+        </script>
+        <!-- referenced a tutorial on youtube / traversy media -->
     
 </body>
 </html>

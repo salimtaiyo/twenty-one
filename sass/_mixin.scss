@@ -4,30 +4,14 @@
     -moz-box-shadow: -12px 10px 30px -6px rgba(0,0,0,0.82);
     box-shadow: -12px 10px 30px -6px rgba(0,0,0,0.82);
 }
-
-// box shadow used for the cover on hover
-// @mixin box-shadow2{
-//     -webkit-box-shadow: -10px 10px 37px 0px rgba(0,0,0,0.75);
-//     -moz-box-shadow: -10px 10px 37px 0px rgba(0,0,0,0.75);
-//     box-shadow: -10px 10px 37px 0px rgba(0,0,0,0.75);
-// }
-
 @mixin box-shadow2{
-    -webkit-box-shadow: 2px 26px 27px -10px rgba(0,0,0,0.75);
-    -moz-box-shadow: 2px 26px 27px -10px rgba(0,0,0,0.75);
-    box-shadow: 2px 26px 27px -10px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 18px 22px 41px -13px rgba(31,30,31,1);
+    -moz-box-shadow: 18px 22px 41px -13px rgba(31,30,31,1);
+    box-shadow: 18px 22px 41px -13px rgba(31,30,31,1);
 }
 @mixin back-clip{
     -webkit-clip-path: polygon(81% 0, 100% 0, 100% 70%, 25% 100%, 0 100%, 0% 30%);
 clip-path: polygon(81% 0, 100% 0, 100% 70%, 25% 100%, 0 100%, 0% 30%);
 }
 
-@mixin back-clip2{
-    -webkit-clip-path: polygon(81% 0, 100% 0, 100% 99%, 21% 71%, 0 100%, 0% 30%);
-    clip-path: polygon(81% 0, 100% 0, 100% 99%, 21% 71%, 0 100%, 0% 30%);
-}
-
-@mixin back-clip3{
-    -webkit-clip-path: polygon(52% 42%, 89% 0, 100% 35%, 80% 55%, 80% 90%, 51% 64%, 23% 90%, 24% 54%, 1% 32%, 10% 0);
-clip-path: polygon(52% 42%, 89% 0, 100% 35%, 80% 55%, 80% 90%, 51% 64%, 23% 90%, 24% 54%, 1% 32%, 10% 0);
-}
+// box shadow ang background clip  generated from cssmatic

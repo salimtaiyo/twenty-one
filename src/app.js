@@ -3,11 +3,10 @@ $(() => {
   const $roll = $('.roll'); // selects the roll button
   const $hold = $('.hold'); // selects the hold button
 
+  const $winner = $('.winner');
+
   const $playerScoreOne = $('.player--0--roll');
   const $playerScoreTwo = $('.player--1--roll');
-
-  const $playerOne = $('.player--0');
-  const $playerTwo = $('.player--1');
 
   let active = 0; // setting the active player to 0
   let roundScore = 0; // setting the roundscore to 0
@@ -21,18 +20,17 @@ $(() => {
   const sound = new Audio(); // audio sfx on roll
   sound.src = '../img/dicesfx.mp3';
 
+  const winSfx = new Audio();
+  winSfx.src = '../img/victorysfx.mp3';
+
   // change player and adding/removing the highlight class
   function playerChange() {
     if (active === 0) {
       active = 1;
-      // $playerTwo.addClass('highlight');
-      // $playerOne.removeClass('highlight');
       $nameTwo.addClass('highlight');
       $nameOne.removeClass('highlight');
     } else {
       active = 0;
-      // $playerOne.addClass('highlight');
-      // $playerTwo.removeClass('highlight');
       $nameOne.addClass('highlight');
       $nameTwo.removeClass('highlight');
     }
@@ -45,7 +43,6 @@ $(() => {
   $roll.on('click', () => {
     sound.play();
     if (active === 0) {
-      // $playerOne.addClass('highlight');
       $nameOne.addClass('highlight');
     }
     // random number generator
@@ -64,11 +61,21 @@ $(() => {
   // hold button
   $hold.on('click', () => {
     points[active] += roundScore;
-    console.log(points[active]);
     $(`.${active}--points`).text(points[active]);
-
+    // winner display
+    const w = $('.input__name--1').val().toUpperCase();
+    const z = $('.input__name--2').val().toUpperCase();
     if (points[active] >= 21) {
-      alert('winner');
+      $nameOne.removeClass('highlight');
+      if (active === 0) {
+        $('.winner__header--name').html(w);
+        winSfx.play();
+      } else {
+        $nameTwo.removeClass('highlight');
+        $('.winner__header--name').html(z);
+        winSfx.play();
+      }
+      $winner.fadeIn(1000);
     } else {
       playerChange();
     }
@@ -83,25 +90,27 @@ $(() => {
     $playerScoreTwo.text('0');
     $('.0--points').text('0');
     $('.1--points').text('0');
-    // $playerOne.removeClass('highlight');
-    // $playerTwo.removeClass('highlight');
     $dice.hide();
-    $nameOne.removeClass('highlight');
-    $nameTwo.removeClass('highlight');
+    $nameOne.text('Player 1');
+    $nameTwo.text('Player 2');
   });
 
   // player name
   $showInput.on('click', () => {
-    $('.input__name').show();
-    // alert('pressed');
+    $('.input__name').fadeIn(1000);
   });
 
   // setting and hidding the input modal
   $('.input__name--btn').on('click', () => {
-    const x = $('.input__name--1').val();
-    const y = $('.input__name--2').val();
+    const x = $('.input__name--1').val().toUpperCase();
+    const y = $('.input__name--2').val().toUpperCase();
     $nameOne.text(x);
     $nameTwo.text(y);
-    $('.input__name').hide();
+    $('.input__name').fadeOut(1000);
+  });
+
+  // hide modal
+  $('.winner__close').on('click', () => {
+    $('.winner').fadeOut(500);
   });
 });

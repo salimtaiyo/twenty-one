@@ -6,3 +6,45 @@
     @include back-clip;
     // z-index: 100;
 }
+// winner modal 
+.winner{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    background-color:rgba(114, 138, 191, 0.781);
+    border-radius: 2%;
+    width: 60vw;
+    height: 20vw;
+    text-align: center;
+    font-size: 1vw;
+    display: none;
+
+    &__header{
+        position: relative;
+        top: 40%;
+        &--extra{
+            color: rgba(77, 158, 134, 0.87);
+        }
+    }
+
+    &__close{
+        position: absolute;
+        font-size: 2vw;
+        padding: 1vw;
+        color: #fff;
+        top: 0%;
+        right: 0%;
+    }
+}
+
+//media queries
+@media only screen and (max-width:600px) {
+    .container__grid{
+        position: relative;
+        top: 30%;
+    }
+    .back__box{
+        position: relative;
+        top: 30%;
+    }
+}

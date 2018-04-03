@@ -30,9 +30,9 @@ html {
     transform-style: preserve-3d;
     transform-origin: left;
     transition: all 1s ease-in-out;
-    -webkit-box-shadow: 2px 26px 27px -10px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 2px 26px 27px -10px rgba(0, 0, 0, 0.75);
-    box-shadow: 2px 26px 27px -10px rgba(0, 0, 0, 0.75); }
+    -webkit-box-shadow: 18px 22px 41px -13px #1f1e1f;
+    -moz-box-shadow: 18px 22px 41px -13px #1f1e1f;
+    box-shadow: 18px 22px 41px -13px #1f1e1f; }
     .container__main .flip {
       margin: 0;
       position: absolute;
@@ -42,7 +42,7 @@ html {
       backface-visibility: hidden;
       color: rgba(0, 0, 0, 0.466); }
     .container__main--front {
-      background: url("../img/cover.jpg") center no-repeat;
+      background: url("../img/TwentyOne.png") center no-repeat;
       background-size: 100% 100%; }
     .container__main--back {
       background: #e2dfdf;
@@ -76,19 +76,22 @@ html {
   grid-row: 5 /span 1;
   grid-column: 2 /span 2; }
   .roll:hover {
-    cursor: pointer; }
+    cursor: pointer;
+    color: rgba(74, 182, 148, 0.863); }
 
 .hold {
   grid-row: 5 /span 1;
   grid-column: 4 /span 1; }
   .hold:hover {
-    cursor: pointer; }
+    cursor: pointer;
+    color: rgba(74, 182, 148, 0.863); }
 
 .new {
   grid-row: 5 /span 1;
   grid-column: 1 /span 1; }
   .new:hover {
-    cursor: pointer; }
+    cursor: pointer;
+    color: rgba(74, 182, 148, 0.863); }
 
 .player--0--score {
   grid-row: 4 /span 1;
@@ -130,6 +133,38 @@ html {
   -webkit-clip-path: polygon(81% 0, 100% 0, 100% 70%, 25% 100%, 0 100%, 0% 30%);
   clip-path: polygon(81% 0, 100% 0, 100% 70%, 25% 100%, 0 100%, 0% 30%); }
 
+.winner {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  background-color: rgba(114, 138, 191, 0.781);
+  border-radius: 2%;
+  width: 60vw;
+  height: 20vw;
+  text-align: center;
+  font-size: 1vw;
+  display: none; }
+  .winner__header {
+    position: relative;
+    top: 40%; }
+    .winner__header--extra {
+      color: rgba(77, 158, 134, 0.87); }
+  .winner__close {
+    position: absolute;
+    font-size: 2vw;
+    padding: 1vw;
+    color: #fff;
+    top: 0%;
+    right: 0%; }
+
+@media only screen and (max-width: 600px) {
+  .container__grid {
+    position: relative;
+    top: 30%; }
+  .back__box {
+    position: relative;
+    top: 30%; } }
+
 .container__main--back {
   position: relative;
   overflow: hidden;
@@ -143,20 +178,22 @@ html {
 .instruct {
   border-bottom: 1px solid red; }
 
-ul {
-  list-style-type: none; }
+li {
+  padding: 1vw; }
 
 .h3 {
   padding: 1vw;
-  color: red; }
+  color: rgba(255, 0, 0, 0.918);
+  transition: all .5s ease-in-out; }
   .h3:hover {
-    cursor: pointer; }
+    cursor: pointer;
+    color: rgba(86, 139, 122, 0.815); }
 
 .input__name {
   position: absolute;
   padding: 3vw;
   top: 20%;
-  left: 25%;
+  left: 30%;
   display: none;
   height: 30vw;
   width: 40vw;

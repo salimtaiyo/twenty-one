@@ -28,6 +28,7 @@
 
     &:hover {
         cursor:pointer;
+        color: rgba(74, 182, 148, 0.863);
     }
 }
 
@@ -37,6 +38,7 @@
 
     &:hover {
         cursor:pointer;
+        color: rgba(74, 182, 148, 0.863);
     }
 }
 
@@ -46,6 +48,7 @@
 
     &:hover {
         cursor:pointer;
+        color: rgba(74, 182, 148, 0.863);
     }
 }
 
@@ -84,7 +87,6 @@
 }
 
 //highlight active player 
-
 .highlight{
     border-bottom: 2px solid rgb(0, 117, 252);
 }

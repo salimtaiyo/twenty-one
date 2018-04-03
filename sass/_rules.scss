@@ -10,38 +10,36 @@
     padding: 3vw;
     font-size: 1.2vw;
 }
-
 // header
 .instruct{
     border-bottom: 1px solid red;
-   
 }
-// resetting the value of ul
-ul{
-    list-style-type: none;
+
+li{
+    padding: 1vw;
 }
 
 .h3{
     padding: 1vw;
-    color: red;
+    color: rgba(255, 0, 0, 0.918);
+    transition: all .5s ease-in-out;
 
     &:hover{
         cursor: pointer;
+        color: rgba(86, 139, 122, 0.815);
     }
-
 }
 // input name box
 .input__name{
   position: absolute;
   padding: 3vw;
   top: 20%;
-  left: 25%;
+  left: 30%;
   display: none;
   height: 30vw;
   width: 40vw;
   z-index: 100;
-//   background: rgba(170, 255, 230, 0.767);
-background: rgba(255, 255, 255, 0.808);
+  background: rgba(255, 255, 255, 0.808);
 
   & p input{
       width: 99%;
@@ -76,9 +74,3 @@ background: rgba(255, 255, 255, 0.808);
   }
 }
 
-// input{
-//     display: inline-block;
-//     outline: none;
-//     padding: 1vw;
-//     width: 100%;
-// }
