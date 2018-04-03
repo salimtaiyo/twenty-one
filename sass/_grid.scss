@@ -1,6 +1,8 @@
 
 .container__grid{
     position: relative;
+    -webkit-transform: translate(2%,2%);
+    -ms-transform: translate(2%,2%);
     transform: translate(2%,2%);
     display: grid;
     grid-template-rows: repeat(5,8vw);
